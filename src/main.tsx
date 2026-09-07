@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { LazyMotion, domAnimation, m, useReducedMotion } from 'framer-motion'
 import './styles.css'
 
-const A = '/assets/'
+const A = `${import.meta.env.BASE_URL}assets/`
 const work = [
   ['project-royal-institute-traditional-arts-01.jpg', 'المعهد الملكي للفنون التقليدية في قصر الحريري'],
   ['project-world-dates-festival-01.jpg', 'مهرجان عالم التمور / المركز الوطني للنخيل والتمور'],
@@ -97,6 +97,7 @@ function Cursor({ cursor }: { cursor: { x: number, y: number, interactive: boole
 function GlobeIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="8.5"/><path d="M3.8 12h16.4M12 3.5c2.1 2.25 3.1 5.08 3.1 8.5S14.1 18.25 12 20.5c-2.1-2.25-3.1-5.08-3.1-8.5S9.9 5.75 12 3.5"/></svg> }
 function MailIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4.5 7 7.5 5.8L19.5 7"/></svg> }
 function PhoneIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M7.1 3.8 4.8 5.2c-.7.43-1 1.28-.7 2.06 2.2 5.83 5.72 9.36 11.55 11.57.78.3 1.63 0 2.06-.7l1.38-2.3c.42-.7.32-1.6-.25-2.17l-1.55-1.55a1.8 1.8 0 0 0-2.15-.3l-1.1.62a14.1 14.1 0 0 1-2.5-2.48l.62-1.1a1.8 1.8 0 0 0-.3-2.15l-1.55-1.55a1.8 1.8 0 0 0-2.17-.25Z"/></svg> }createRoot(document.getElementById('root')!).render(<LazyMotion features={domAnimation}><App /></LazyMotion>)
+
 
 
 
